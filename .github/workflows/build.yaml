@@ -42,7 +42,7 @@ jobs:
           set -eux
           if ! twine --version
           then
-              make publish-installdeps
+              pip install twine
           fi
           twine --version
       - name: Publish to pypi
@@ -77,7 +77,7 @@ jobs:
       - name: Install denendencies
         run: |
           set -eux
-          make installdeps
+          pip install .[dev]
       - name: Run test
         run: make test
 
@@ -103,6 +103,6 @@ jobs:
       - name: Install denendencies
         run: |
           set -eux
-          make installdeps
+          pip install .[dev]
       - name: Run linter
         run: make lint
