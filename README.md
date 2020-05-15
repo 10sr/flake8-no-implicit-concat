@@ -20,16 +20,6 @@ a = ["aaa",
 ```
 
 
-Installation
-------------
-
-Install via pip:
-
-```shell
-pip install ansible-modules-pm2
-```
-
-
 Violation codes
 ---------------
 
