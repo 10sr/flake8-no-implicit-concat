@@ -3,14 +3,13 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[dev-packages]
-flake8-no-implicit-concat = {editable = true,extras = ["dev"],path = "."}
-
 [packages]
-flake8-no-implicit-concat = {editable = true,path = "."}
-
-[requires]
-python_version = "3.7"
+flake8-no-implicit-concat = {editable = true,extras = ["dev"],path = "."}
 
 [pipenv]
 allow_prereleases = true
+
+[scripts]
+check = "make check"
+isortify = "make isortify"
+blacken = "make blacken"
