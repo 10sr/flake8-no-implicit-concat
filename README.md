@@ -6,11 +6,13 @@ Flake8 plugin to reject any implicit string concatenations.
 
 ```python
 # NG
-a = ("String with "
-     "implicit concatenation")
+a = ["aaa",
+     "bbb"
+     "ccc"]
 # OK
-b = ("Explicitly concatenated " +
-     "string")
+a = ["aaa",
+     "bbb" +
+     "ccc"]
 ```
 
 Development
