@@ -1,8 +1,10 @@
-check: test lint
+check: test lint 
 
 test:
 
-lint:
+lint: mypy flake8
+
+flake8:
 	flake8 .
 
 isortify:
@@ -10,3 +12,8 @@ isortify:
 
 blacken:
 	black .
+
+
+mypy:
+	mypy .
+

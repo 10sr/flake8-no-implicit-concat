@@ -30,7 +30,7 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
         )
     )
     return (
-        (*a.end, "NIC001 Implicitly concatenated string literals", None)
+        (a.end[0], a.end[1], "NIC001 Implicitly concatenated string literals", None)
         for (a, b) in more_itertools.pairwise(tokens_wo_ws)
         if a.type == b.type == tokenize.STRING
     )
