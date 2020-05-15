@@ -1,4 +1,4 @@
-a = ["aaa"  # comment
+a = ["aaa"
 
 
 
