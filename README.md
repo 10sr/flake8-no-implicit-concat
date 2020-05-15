@@ -1,3 +1,7 @@
+[![Github Actions](https://github.com/10sr/flake8-no-implicit-concat/workflows/Build/badge.svg?event=push)](https://github.com/10sr/flake8-no-implicit-concat/actions)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
 flake8-no-implicit-concat
 =========================
 
@@ -14,6 +18,17 @@ a = ["aaa",
      "bbb" +
      "ccc"]
 ```
+
+
+Installation
+------------
+
+Install via pip:
+
+```shell
+pip install ansible-modules-pm2
+```
+
 
 Violation codes
 ---------------
@@ -45,6 +60,6 @@ Use Pipenv to run test locally:
 
 
 License
-=======
+-------
 
 This software is licensed under MIT license. See `LICENSE` for details.
