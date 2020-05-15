@@ -1,12 +1,10 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "56779975738ec6fa13d79cdaa843ebde083da740fa783e2a18dce8283219de84"
+            "sha256": "d8b5bdb3e6a85bad1254125923eb7bef28c86a6c5549471e4e6a55d69890f024"
         },
         "pipfile-spec": 6,
-        "requires": {
-            "python_version": "3.7"
-        },
+        "requires": {},
         "sources": [
             {
                 "name": "pypi",
@@ -16,26 +14,6 @@
         ]
     },
     "default": {
-        "attrs": {
-            "hashes": [
-                "sha256:08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c",
-                "sha256:f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"
-            ],
-            "version": "==19.3.0"
-        },
-        "flake8-no-implicit-concat": {
-            "editable": true,
-            "path": "."
-        },
-        "more-itertools": {
-            "hashes": [
-                "sha256:5dd8bcf33e5f9513ffa06d5ad33d78f31e1931ac9a18f33d37e77a180d393a7c",
-                "sha256:b1ddb932186d8a6ac451e1d95844b382f55e12686d51ca0c68b6f61f2ab7a507"
-            ],
-            "version": "==8.2.0"
-        }
-    },
-    "develop": {
         "appdirs": {
             "hashes": [
                 "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41",
@@ -64,6 +42,13 @@
             ],
             "version": "==7.1.2"
         },
+        "darglint": {
+            "hashes": [
+                "sha256:a20546d703c8608a260048c5721dad638e9d439d1aaaff1891ac3bfa6b2e8d96",
+                "sha256:bb5b0c7e1b0dd4b16d1c355db61a230b68f5537e483cc9e8a8f4b925314b5fad"
+            ],
+            "version": "==1.3.0"
+        },
         "flake8": {
             "hashes": [
                 "sha256:6c1193b0c3f853ef763969238f6c81e9e63ace9d024518edc020d5f1d6d93195",
@@ -77,6 +62,13 @@
             ],
             "version": "==0.1.1"
         },
+        "flake8-docstrings": {
+            "hashes": [
+                "sha256:3d5a31c7ec6b7367ea6506a87ec293b94a0a46c0bce2bb4975b7f1d09b6f3717",
+                "sha256:a256ba91bc52307bef1de59e2a009c3cf61c3d0952dbe035d6ff7208940c2edc"
+            ],
+            "version": "==1.5.0"
+        },
         "flake8-isort": {
             "hashes": [
                 "sha256:3ce227b5c5342b6d63937d3863e8de8783ae21863cb035cf992cdb0ba5990aa3",
@@ -86,6 +78,9 @@
         },
         "flake8-no-implicit-concat": {
             "editable": true,
+            "extras": [
+                "dev"
+            ],
             "path": "."
         },
         "flake8-polyfill": {
@@ -148,6 +143,13 @@
             ],
             "version": "==2.6.0"
         },
+        "pydocstyle": {
+            "hashes": [
+                "sha256:da7831660b7355307b32778c4a0dbfb137d89254ef31a2b2978f50fc0b4d7586",
+                "sha256:f4f5d210610c2d153fae39093d44224c17429e2ad7da12a8b419aba5c2f614b5"
+            ],
+            "version": "==5.0.2"
+        },
         "pyflakes": {
             "hashes": [
                 "sha256:0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92",
@@ -180,6 +182,13 @@
                 "sha256:ea55b80eb0d1c3f1d8d784264a6764f931e172480a2f1868f2536444c5f01e01"
             ],
             "version": "==2020.5.14"
+        },
+        "snowballstemmer": {
+            "hashes": [
+                "sha256:209f257d7533fdb3cb73bdbd24f436239ca3b2fa67d56f6ff88e86be08cc5ef0",
+                "sha256:df3bac3df4c2c01363f3dd2cfa78cce2840a79b9f1c2d2de9ce8d31683992f52"
+            ],
+            "version": "==2.0.0"
         },
         "testfixtures": {
             "hashes": [
@@ -228,5 +237,6 @@
             ],
             "version": "==3.1.0"
         }
-    }
+    },
+    "develop": {}
 }

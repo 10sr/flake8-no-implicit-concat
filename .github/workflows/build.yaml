@@ -1,0 +1,108 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - 'master'
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    needs: [test, lint]
+    if: github.event_name == 'release'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Assert version
+        run: |
+          set -eux
+          test refs/tags/v`python ./setup.py --version` == "${{ github.ref }}"
+      - name: Cache packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-pipcache
+      - name: Cache environment
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-venv
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install denendencies
+        run: |
+          set -eux
+          if ! twine --version
+          then
+              pip install twine
+          fi
+          twine --version
+      - name: Publish to pypi
+        run: make publish publish_repository=pypi
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cache packages
+        # https://github.com/actions/cache/issues/152
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-python${{ matrix.python-version }}-${{ hashFiles('**/Pipfile.lock') }}-pipcache }}
+      - name: Cache environment
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-python${{ matrix.python-version }}-${{ hashFiles('**/Pipfile.lock') }}-venv }}
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install denendencies
+        run: |
+          set -eux
+          pip install .[dev]
+      - name: Run test
+        run: make test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cache packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-pipcache
+      - name: Cache environment
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-venv
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install denendencies
+        run: |
+          set -eux
+          pip install .[dev]
+      - name: Run linter
+        run: make lint
