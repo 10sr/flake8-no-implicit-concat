@@ -1,9 +1,6 @@
 from __future__ import generator_stop
 
-"""
-Flake8 plugin to reject any string literal concatenation.
-Forbid implicitly concatenated string literals in all cases.
-"""
+"""Checker definition."""
 
 import ast
 import tokenize
