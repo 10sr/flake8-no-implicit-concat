@@ -1,16 +1,18 @@
 from __future__ import generator_stop
 
-"""Checker definition."""
-
 import ast
 import tokenize
-from typing import Iterable, List, Tuple
+
 from pprint import pprint
+from typing import Iterable, List, Tuple
 
 import attr
 import more_itertools
 
 from . import __version__
+
+"""Checker definition."""
+
 
 _ERROR = Tuple[int, int, str, None]
 
