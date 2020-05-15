@@ -1,0 +1,8 @@
+include README.md
+include Makefile
+include Pipfile
+include Pipfile.lock
+
+graft tests
+
+global-exclude *.py[co]

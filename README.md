@@ -1,2 +1,5 @@
-# flake8-no-implicit-concat
-WIP Flake8 plugin to reject implicit string concatinations
+flake8-no-implicit-concat
+=========================
+
+
+Flake8 plugin to reject any implicit string concatinations.
