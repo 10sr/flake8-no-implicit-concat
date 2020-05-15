@@ -23,7 +23,7 @@ a = ["aaa",
 Violation codes
 ---------------
 
-The plugin uses the prefix `NIC`, short for Not Implicit Concatenation.
+The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 
 | Code   | Description                             |
 | ------ | --------------------------------------- |
