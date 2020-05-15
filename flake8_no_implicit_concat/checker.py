@@ -1,3 +1,5 @@
+"""NIC Checker definition."""
+
 from __future__ import generator_stop
 
 import ast
@@ -10,9 +12,6 @@ import attr
 import more_itertools
 
 from . import __version__
-
-"""Checker definition."""
-
 
 _ERROR = Tuple[int, int, str, None]
 
@@ -39,10 +38,17 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
 
 @attr.s(frozen=True, auto_attribs=True)
 class Checker:
+    """NIC Checker definition."""
+
     name = "no_implicit_concat"
     version = __version__
     tree: ast.AST
     file_tokens: List[tokenize.TokenInfo]
 
     def run(self) -> Iterable[_ERROR]:
+        """
+        Run checker.
+
+        :yields: Errors found.
+        """
         yield from _check(self.file_tokens)
