@@ -37,16 +37,14 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
-      - name: Install Pipenv
-        run: python -m pip install pipenv
       - name: Install denendencies
         run: |
           set -eux
-          if ! pipenv run twine --version
+          if ! twine --version
           then
               make publish-installdeps
           fi
-          pipenv run twine --version
+          twine --version
       - name: Publish to pypi
         run: make publish publish_repository=pypi
         env:
@@ -77,8 +75,6 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Pipenv
-        run: python -m pip install pipenv
       - name: Install denendencies
         run: |
           set -eux
@@ -105,8 +101,6 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
-      - name: Install Pipenv
-        run: python -m pip install pipenv
       - name: Install denendencies
         run: |
           set -eux
