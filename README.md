@@ -20,8 +20,8 @@ a = ["aaa",
 ```
 
 
-Violation codes
----------------
+Violation code
+--------------
 
 The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 
