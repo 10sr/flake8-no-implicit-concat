@@ -82,7 +82,11 @@ jobs:
           set -eux
           pip install .
       - name: Run test
-        run: make test
+        run: |
+          set -eux
+          python --version
+          flake8 --version
+          make test
 
   lint:
     runs-on: ubuntu-latest
