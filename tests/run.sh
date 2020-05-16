@@ -7,6 +7,11 @@ cd "$dir"
 echo Target files: files/*.py
 for py in files/*.py
 do
+    # Python3.5 does not support f-string so skip it
+    if [[ "`python -V`" =~ ^Python\ 3\.5 && "$py" =~ fstring ]]
+    then
+        continue
+    fi
     echo Checking $py result
     expected="$py".expected
     actual="$py".actual
