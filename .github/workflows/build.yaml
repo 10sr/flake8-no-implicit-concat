@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.5, 3.6, 3.7, 3.8]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -74,12 +74,19 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Update pip and setuptools
+        run: pip install --upgrade pip setuptools
+        if: matrix.python-version == '3.5'
       - name: Install denendencies
         run: |
           set -eux
-          pip install .[dev]
+          pip install .
       - name: Run test
-        run: make test
+        run: |
+          set -eux
+          python --version
+          flake8 --version
+          make test
 
   lint:
     runs-on: ubuntu-latest

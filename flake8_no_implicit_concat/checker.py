@@ -36,14 +36,17 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
     )
 
 
-@attr.s(frozen=True, auto_attribs=True)
+@attr.s(frozen=True)
 class Checker:
     """NIC Checker definition."""
 
     name = "no_implicit_concat"
     version = __version__
-    tree: ast.AST
-    file_tokens: List[tokenize.TokenInfo]
+    # Avoid using variable type annotations for Python3.5 support
+    tree = attr.ib(type=ast.AST)  # type: ast.AST
+    file_tokens = attr.ib(
+        type=List[tokenize.TokenInfo]
+    )  # type: List[tokenize.TokenInfo]
 
     def run(self) -> Iterable[_ERROR]:
         """
