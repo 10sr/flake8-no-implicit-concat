@@ -80,7 +80,7 @@ jobs:
       - name: Install denendencies
         run: |
           set -eux
-          pip install .[dev]
+          pip install .
       - name: Run test
         run: make test
 
