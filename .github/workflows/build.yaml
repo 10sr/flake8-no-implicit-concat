@@ -42,7 +42,7 @@ jobs:
           set -eux
           if ! twine --version
           then
-              pip install twine
+              make publish-installdeps
           fi
           twine --version
       - name: Publish to pypi
