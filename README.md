@@ -33,7 +33,7 @@ The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 Related Project
 ---------------
 
-- [**flake8-implicit-str-concat**](https://github.com/keisheiled/flake8-implicit-str-concat)
+- [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
   There are cases where this plugin prefers to implicit concatenation over
   explicit `+`, so these two plugins cannot be used at once.
@@ -53,3 +53,10 @@ License
 -------
 
 This software is licensed under MIT license. See `LICENSE` for details.
+
+The code was derived from [flake8-implicit-str-concat][], which is developed by
+Dylan Turner and also licensed under MIT license.
+
+
+
+[flake8-implicit-str-concat]: https://github.com/keisheiled/flake8-implicit-str-concat
