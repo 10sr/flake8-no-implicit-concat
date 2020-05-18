@@ -41,13 +41,17 @@ The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 | NIC001 | Implicitly concatenated string literals |
 
 
-Related Project
----------------
+Related Projects
+----------------
 
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
   There are cases where this plugin prefers to implicit concatenation over
   explicit `+`, so these two plugins cannot be used at once.
+- [**wemake-python-styleguide**][wemake-python-styleguide]
+  Set of strict flake8 rules with some other plugins as dependencies.
+  It implements `WPS326 Found implicit string concatenation`, which also 
+  checks implicit string concatenations, as one of the many rules it has.
 
 
 Development
@@ -71,3 +75,4 @@ Dylan Turner and also licensed under MIT license.
 
 
 [flake8-implicit-str-concat]: https://github.com/keisheiled/flake8-implicit-str-concat
+[wemake-python-styleguide]: https://github.com/wemake-services/wemake-python-styleguide
