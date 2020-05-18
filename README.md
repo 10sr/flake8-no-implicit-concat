@@ -3,22 +3,20 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
+
 flake8-no-implicit-concat
 =========================
 
-
 Flake8 plugin that forbids any implicit string concatenations.
 
-```python
-# NG
-a = ["aaa",
-     "bbb"
-     "ccc"]
-# OK
-a = ["aaa",
-     "bbb" +
-     "ccc"]
-```
+    # NG
+    a = ["aaa",
+         "bbb"
+         "ccc"]
+    # OK
+    a = ["aaa",
+         "bbb" +
+         "ccc"]
 
 
 Installation
@@ -26,9 +24,7 @@ Installation
 
 Install via pip:
 
-```shell
-pip install flake8-no-implicit-concat
-```
+    pip install flake8-no-implicit-concat
 
 
 Violation code
@@ -58,7 +54,6 @@ Development
 -----------
 
 Use Pipenv to run test locally:
-
 
     pipenv install
     pipenv run check
