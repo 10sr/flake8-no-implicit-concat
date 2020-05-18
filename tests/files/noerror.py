@@ -6,3 +6,6 @@ fff""" + "ggg"
 l = ["hhh",
      "iii" +
      "jjj"]
+noqa = "k" "l"  # noqa: NIC001
+noqa = ("k"  # noqa: NIC001
+        "l")
