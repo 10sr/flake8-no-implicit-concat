@@ -20,6 +20,16 @@ a = ["aaa",
 ```
 
 
+Installation
+------------
+
+Install via pip:
+
+```shell
+pip install flake8-no-implicit-concat
+```
+
+
 Violation code
 --------------
 
