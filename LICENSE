@@ -1,9 +1,11 @@
 MIT License
 
+Copyright (c) 2020 10sr
+Copyright (c) 2019 Dylan Turner
+
 Copyright for portions of this project are held by [Dylan Turner, 2019]
 as part of project flake8-implicit-str-concat.
 All other copyright for this project are held by [10sr, 2020].
-
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
