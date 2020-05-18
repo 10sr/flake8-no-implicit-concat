@@ -6,7 +6,7 @@ flake8-no-implicit-concat
 =========================
 
 
-Flake8 plugin to reject any implicit string concatenations.
+Flake8 plugin that forbids any implicit string concatenations.
 
 ```python
 # NG
