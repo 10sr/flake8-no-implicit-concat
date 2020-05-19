@@ -1,5 +1,6 @@
 [![Github Actions](https://github.com/10sr/flake8-no-implicit-concat/workflows/Build/badge.svg?event=push)](https://github.com/10sr/flake8-no-implicit-concat/actions)
 [![PyPI version](https://badge.fury.io/py/flake8-no-implicit-concat.svg)](https://badge.fury.io/py/flake8-no-implicit-concat)
+[![Downloads](https://pepy.tech/badge/flake8-no-implicit-concat)](https://pepy.tech/project/flake8-no-implicit-concat)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
