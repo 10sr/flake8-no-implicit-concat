@@ -1,7 +1,19 @@
 check: test lint 
 
-test:
-	tests/run.sh
+test: test-runflake8 test-pytest
+
+
+test-runflake8:
+	tests/run_flake8/Run.sh
+
+test-pytest:
+	coverage erase
+	coverage run -m unittest discover -v  # tests/test_*.py
+	coverage report --fail-under 90
+
+codecov:
+	codecov
+
 
 lint: mypy flake8
 
