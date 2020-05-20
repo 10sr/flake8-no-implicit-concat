@@ -5,7 +5,7 @@ from __future__ import generator_stop
 import ast
 import tokenize
 
-from typing import Iterable, List, Tuple
+from typing import Iterable, Tuple
 
 import attr
 import more_itertools
@@ -44,8 +44,8 @@ class Checker:
     # Avoid using variable type annotations for Python3.5 support
     tree = attr.ib(type=ast.AST)  # type: ast.AST
     file_tokens = attr.ib(
-        type=List[tokenize.TokenInfo]
-    )  # type: List[tokenize.TokenInfo]
+        type=Iterable[tokenize.TokenInfo]
+    )  # type: Iterable[tokenize.TokenInfo]
 
     def run(self) -> Iterable[_ERROR]:
         """
