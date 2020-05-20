@@ -4,8 +4,7 @@ set -eu
 dir=$(dirname $0)
 cd "$dir"
 
-echo Target files: files/*.py
-for py in files/*.py
+for py in ./*.py
 do
     # Python3.5 does not support f-string so skip it
     if [[ "`python -V`" =~ ^Python\ 3\.5 && "$py" =~ fstring ]]
