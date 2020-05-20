@@ -81,7 +81,7 @@ jobs:
       - name: Install denendencies
         run: |
           set -eux
-          pip install .
+          pip install . coverage codecov
       - name: Run test
         run: |
           set -eux
