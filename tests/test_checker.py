@@ -22,7 +22,7 @@ class TestChecker(unittest.TestCase):
         input = "a = 'aaa'"
         checker = Checker(ast.parse(input), _tokenize(input))
         actual = list(checker.run())
-        expected: Iterable[Tuple[int, int, str, None]] = []
+        expected = []  # type: Iterable[Tuple[int, int, str, None]]
         self.assertEqual(actual, expected)
         return
 
