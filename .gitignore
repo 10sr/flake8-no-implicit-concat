@@ -4,4 +4,4 @@ __pycache__
 .mypy_cache/
 build/
 dist/
-.coverage
+coverage.xml
