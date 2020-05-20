@@ -17,7 +17,7 @@ codecov:
 
 lint: mypy flake8
 
-lint_target := flake8_no_implicit_concat/
+lint_target := .
 
 flake8:
 	flake8 $(lint_target)

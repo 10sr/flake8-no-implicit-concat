@@ -1,0 +1,1 @@
+"""NIC test module."""
