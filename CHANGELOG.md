@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Update README
+
+### Fixed
+
+- Fix License classifier
+
 
 ## [0.1.0] - 2020-05-18
 
