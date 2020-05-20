@@ -1,0 +1,3 @@
+./blanklines.py:1:11: NIC001 Implicitly concatenated string literals
+./blanklines.py:6:11: NIC001 Implicitly concatenated string literals
+./blanklines.py:13:15: NIC001 Implicitly concatenated string literals

@@ -56,6 +56,8 @@ jobs:
     strategy:
       matrix:
         python-version: [3.5, 3.6, 3.7, 3.8]
+    env:
+      python_version_codecov: 3.8
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -81,13 +83,16 @@ jobs:
       - name: Install denendencies
         run: |
           set -eux
-          pip install .
+          pip install . coverage codecov
       - name: Run test
         run: |
           set -eux
           python --version
           flake8 --version
           make test
+      - name: Run codecov
+        uses: codecov/codecov-action@v1
+        if: matrix.python-version == env.python_version_codecov
 
   lint:
     runs-on: ubuntu-latest
