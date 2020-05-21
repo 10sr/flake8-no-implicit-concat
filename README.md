@@ -1,4 +1,4 @@
-[![Github Actions](https://github.com/10sr/flake8-no-implicit-concat/workflows/Build/badge.svg?event=push)](https://github.com/10sr/flake8-no-implicit-concat/actions)
+[![Github Actions](https://github.com/10sr/flake8-no-implicit-concat/workflows/build/badge.svg?event=push)](https://github.com/10sr/flake8-no-implicit-concat/actions)
 [![codecov](https://codecov.io/gh/10sr/flake8-no-implicit-concat/branch/master/graph/badge.svg)](https://codecov.io/gh/10sr/flake8-no-implicit-concat)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flake8-no-implicit-concat)
 [![PyPI version](https://badge.fury.io/py/flake8-no-implicit-concat.svg)](https://badge.fury.io/py/flake8-no-implicit-concat)
