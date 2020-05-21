@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [0.1.2] - 2020-05-21
+
 ### Fixed
 
 - Fix License in setup.cfg
@@ -36,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/10sr/flake8-no-implicit-concat/releases/tag/v0.1.0
