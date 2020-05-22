@@ -29,7 +29,7 @@ blacken:
 	black $(lint_target)
 
 mypy:
-	mypy $(lint_target)
+	mypy --strict $(lint_target)
 
 
 
