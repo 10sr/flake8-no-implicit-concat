@@ -15,21 +15,22 @@ codecov:
 	codecov
 
 
-lint: mypy flake8
+lint: mypy flake8 pylint
 
-lint_target := .
+pylint:
+	pylint --rcfile=setup.cfg flake8_no_implicit_concat
 
 flake8:
-	flake8 $(lint_target)
+	flake8 .
 
 isortify:
-	isort -rc $(lint_target)
+	isort -rc .
 
 blacken:
-	black $(lint_target)
+	black .
 
 mypy:
-	mypy --strict $(lint_target)
+	mypy --strict .
 
 
 
