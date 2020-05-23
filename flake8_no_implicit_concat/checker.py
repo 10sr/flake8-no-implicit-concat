@@ -48,8 +48,7 @@ class Checker:
     )  # type: Iterable[tokenize.TokenInfo]
 
     def run(self) -> Iterable[_ERROR]:
-        """
-        Run checker.
+        """Run checker.
 
         :yields: Errors found.
         """
