@@ -15,13 +15,16 @@ codecov:
 	codecov
 
 
-lint: mypy flake8 pylint
+lint: mypy flake8 pylint bandit
 
 pylint:
 	pylint --rcfile=setup.cfg flake8_no_implicit_concat
 
 flake8:
 	flake8 .
+
+bandit:
+	bandit -r flake8_no_implicit_concat
 
 isortify:
 	isort -rc .
