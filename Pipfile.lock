@@ -162,6 +162,14 @@
             ],
             "version": "==1.0.2"
         },
+        "hacking": {
+            "hashes": [
+                "sha256:72d8c3bb5671e6b703bd9ce7bd60b79d5bfc62d8427b1002bfde78f7b9279ed8",
+                "sha256:a560a2d9085ec55c8fda5810d259b0da43e5b8c01f1b3c863ebeb94ccd7f588e"
+            ],
+            "markers": "python_version >= '3.5'",
+            "version": "==3.1.0"
+        },
         "idna": {
             "hashes": [
                 "sha256:7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb",
