@@ -5,7 +5,8 @@ import tokenize
 import unittest
 
 from io import BytesIO
-from typing import Iterable, Tuple
+from typing import Iterable
+from typing import Tuple
 
 from flake8_no_implicit_concat.checker import Checker
 

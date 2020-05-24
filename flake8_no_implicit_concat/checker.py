@@ -5,7 +5,8 @@ from __future__ import generator_stop
 import ast
 import tokenize
 
-from typing import Iterable, Tuple
+from typing import Iterable
+from typing import Tuple
 
 import attr
 import more_itertools
