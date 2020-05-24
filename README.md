@@ -13,11 +13,13 @@ flake8-no-implicit-concat
 Flake8 plugin that forbids any implicit string concatenations.
 
     # NG
-    a = ["aaa",
+    a = "abc" "def"
+    b = ["aaa",
          "bbb"
          "ccc"]
     # OK
-    a = ["aaa",
+    a = "abcdef"
+    b = ["aaa",
          "bbb" +
          "ccc"]
 
