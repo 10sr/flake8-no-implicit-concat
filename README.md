@@ -10,7 +10,7 @@
 flake8-no-implicit-concat
 =========================
 
-Flake8 plugin that forbids any implicit string concatenations.
+Flake8 plugin that forbids implicit string literal concatenations.
 
     # NG
     a = "abc" "def"
@@ -48,10 +48,10 @@ Related Projects
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
   There are cases where this plugin prefers to implicit concatenation over
-  explicit `+`, so these two plugins cannot be used at once.
+  explicit `+` operator , so these two plugins cannot be used at once.
 - [**wemake-python-styleguide**][wemake-python-styleguide]
   Set of strict flake8 rules with some other plugins as dependencies.
-  It implements `WPS326 Found implicit string concatenation`, which also 
+  It implements `WPS326 Found implicit string concatenation`, which also
   checks implicit string concatenations, as one of the many rules it has.
 
 
