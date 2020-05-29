@@ -53,6 +53,10 @@ Related Projects
   Set of strict flake8 rules with some other plugins as dependencies.
   It implements `WPS326 Found implicit string concatenation`, which also
   checks implicit string concatenations, as one of the many rules it has.
+- [**pylint**][pylint] This linter has `implicit-str-concat` rule, which does
+  the same thing.
+  By default it only looks for occurrences on the same line, but you can give
+  `--check-str-concat-over-line-jumps=y` option for multiple lines concat.
 
 
 Development
@@ -76,3 +80,4 @@ Dylan Turner and also licensed under MIT license.
 
 [flake8-implicit-str-concat]: https://github.com/keisheiled/flake8-implicit-str-concat
 [wemake-python-styleguide]: https://github.com/wemake-services/wemake-python-styleguide
+[pylint]: https://github.com/PyCQA/pylint
