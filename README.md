@@ -53,10 +53,10 @@ Related Projects
   Set of strict flake8 rules with some other plugins as dependencies.
   It implements `WPS326 Found implicit string concatenation`, which also
   checks implicit string concatenations, as one of the many rules it has.
-- [**pylint**][pylint] This linter has `implicit-str-concat` rule, which does
-  the same thing.
-  By default it only looks for occurrences on the same line, but you can give
-  `--check-str-concat-over-line-jumps=y` option for multiple lines concat.
+- [**pylint**][pylint] This linter has `implicit-str-concat` rule.
+  By default it only looks for occurrences of implicit concatenations on the
+  same line, but you can give the `--check-str-concat-over-line-jumps=y` option
+  for concatenations over multiple lines.
 
 
 Development
