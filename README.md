@@ -48,7 +48,7 @@ Related Projects
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
   There are cases where this plugin prefers to implicit concatenation over
-  explicit `+` operator , so these two plugins cannot be used at once.
+  explicit `+` operator , so these two plugins cannot be used in combination.
 - [**wemake-python-styleguide**][wemake-python-styleguide]
   Set of strict flake8 rules with some other plugins as dependencies.
   It implements `WPS326 Found implicit string concatenation`, which also
