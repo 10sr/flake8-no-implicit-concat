@@ -60,7 +60,7 @@ Development
 
 Use Pipenv to run test locally:
 
-    pipenv install
+    pipenv install --dev
     pipenv run check
 
 
