@@ -42,8 +42,8 @@ The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 | NIC001 | Implicitly concatenated string literals |
 
 
-Related Projects
-----------------
+Other Plugins & Linters
+-----------------------
 
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
