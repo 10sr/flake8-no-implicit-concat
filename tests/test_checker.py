@@ -8,7 +8,7 @@ from io import BytesIO
 from typing import Iterable
 from typing import Tuple
 
-from flake8_no_implicit_concat.checker import Checker
+from flake8_no_implicit_concat import Checker
 
 
 def _tokenize(input: str) -> Iterable[tokenize.TokenInfo]:
