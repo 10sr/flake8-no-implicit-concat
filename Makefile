@@ -15,10 +15,7 @@ codecov:
 	codecov
 
 
-lint: mypy flake8 pylint
-
-pylint:
-	pylint --rcfile=setup.cfg flake8_no_implicit_concat
+lint: mypy flake8
 
 flake8:
 	flake8 .
