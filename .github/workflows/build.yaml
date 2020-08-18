@@ -19,10 +19,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Assert version
-        run: |
-          set -eux
-          test refs/tags/v`python3 ./setup.py --version` == "${{ github.ref }}"
       - name: Cache packages
         uses: actions/cache@v1
         with:
@@ -45,6 +41,10 @@ jobs:
               make publish-installdeps
           fi
           twine --version
+      - name: Assert version
+        run: |
+          set -eux
+          test refs/tags/v`python3 ./setup.py --version` == "${{ github.ref }}"
       - name: Publish to pypi
         run: make publish publish_repository=pypi
         env:
