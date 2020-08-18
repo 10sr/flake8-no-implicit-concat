@@ -22,7 +22,7 @@ jobs:
       - name: Assert version
         run: |
           set -eux
-          test refs/tags/v`python ./setup.py --version` == "${{ github.ref }}"
+          test refs/tags/v`python3 ./setup.py --version` == "${{ github.ref }}"
       - name: Cache packages
         uses: actions/cache@v1
         with:
