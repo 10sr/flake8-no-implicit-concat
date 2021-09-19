@@ -27,7 +27,8 @@ blacken:
 	black .
 
 mypy:
-	mypy --strict .
+	# Temporarily check only package directory
+	mypy --strict flake8_no_implicit_concat/
 
 
 
