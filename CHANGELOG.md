@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [0.1.5] - 2020-08-19
+
+### Added
+
+- Add python 3.9 support
+
+
 ## [0.1.4] - 2020-08-19
 
 ### Added
@@ -56,7 +63,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.4...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.5...HEAD
+[0.1.5]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.1...v0.1.2
