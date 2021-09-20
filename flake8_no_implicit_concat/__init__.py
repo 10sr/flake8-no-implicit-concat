@@ -9,8 +9,6 @@ from __future__ import generator_stop
 import ast
 import tokenize
 
-from dataclasses import dataclass
-from dataclasses import field
 from typing import Iterable
 from typing import Tuple
 
@@ -41,15 +39,21 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
     )
 
 
-@dataclass(frozen=True)
 class Checker:
     """NIC Checker definition."""
 
     name = "no_implicit_concat"
     version = __version__
-    # Avoid using variable type annotations for Python3.5 support
-    tree: ast.AST
-    file_tokens: Iterable[tokenize.TokenInfo]
+
+    def __init__(self, tree: ast.AST, file_tokens: Iterable[tokenize.TokenInfo]):
+        """Intialize Checker.
+
+        :param tree: File AST
+        :param file_tokens: File tokens
+        """
+        self.tree = tree
+        self.file_tokens = file_tokens
+        return
 
     def run(self) -> Iterable[_ERROR]:
         """Run checker.
