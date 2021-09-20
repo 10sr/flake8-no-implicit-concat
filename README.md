@@ -62,10 +62,10 @@ Other Plugins & Linters
 Development
 -----------
 
-Use Pipenv to run test locally:
+Use tools like Pipenv:
 
-    pipenv install --dev
-    pipenv run check
+    pipenv run python -m pip install .[dev]
+    pipenv run make check
 
 
 License
