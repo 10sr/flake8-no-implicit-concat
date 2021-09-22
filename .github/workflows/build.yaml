@@ -28,11 +28,11 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-venv
+          key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: 3.9
       - name: Install denendencies
         run: |
           set -eux
@@ -103,16 +103,16 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-pipcache
+          key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-pipcache
       - name: Cache environment
         uses: actions/cache@v1
         with:
           path: ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-python3.8-${{ hashFiles('**/Pipfile.lock') }}-venv
+          key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: 3.9
       - name: Install denendencies
         run: |
           set -eux
