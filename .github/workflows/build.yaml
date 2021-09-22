@@ -30,7 +30,7 @@ jobs:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9
       - name: Install denendencies
@@ -73,7 +73,7 @@ jobs:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-python${{ matrix.python-version }}-${{ hashFiles('**/Pipfile.lock') }}-venv }}
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
       - name: Update pip and setuptools (py35 only)
@@ -110,7 +110,7 @@ jobs:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9
       - name: Install denendencies
