@@ -10,7 +10,7 @@
 flake8-no-implicit-concat
 =========================
 
-Flake8 plugin that forbids implicit string literal concatenations.
+[Flake8][] plugin that forbids implicit string literal concatenations.
 
     # NG
     a = "abc" "def"
@@ -78,6 +78,7 @@ Dylan Turner and also licensed under MIT license.
 
 
 
+[Flake8]: https://flake8.pycqa.org/en/latest/
 [flake8-implicit-str-concat]: https://github.com/keisheiled/flake8-implicit-str-concat
 [wemake-python-styleguide]: https://github.com/wemake-services/wemake-python-styleguide
 [pylint]: https://github.com/PyCQA/pylint
