@@ -64,7 +64,7 @@ Development
 
 Use tools like Pipenv:
 
-    pipenv run python -m pip install .[dev]
+    pipenv run python -m pip install -e .[dev]
     pipenv run make check
 
 
