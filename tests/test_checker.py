@@ -33,7 +33,9 @@ class TestChecker(unittest.TestCase):
         input = "a = 'aaa' 'bbb'"
         checker = Checker(ast.parse(input), _tokenize(input))
         actual = list(checker.run())
-        expected = [(1, 9, "NIC001 Implicitly concatenated string literals", None)]
+        expected = [
+            (1, 9, "NIC001 Implicitly concatenated string literals in one line", None)
+        ]
         self.assertEqual(actual, expected)
         return
 
