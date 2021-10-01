@@ -32,11 +32,24 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
             tokenize.COMMENT,
         )
     )
-    return (
-        (a.end[0], a.end[1], "NIC001 Implicitly concatenated string literals", None)
-        for (a, b) in more_itertools.pairwise(tokens_wo_ws)
-        if a.type == b.type == tokenize.STRING
-    )
+    for (a, b) in more_itertools.pairwise(tokens_wo_ws):
+        if not (a.type == b.type == tokenize.STRING):
+            continue
+        if a.end[0] == b.start[0]:
+            yield (
+                a.end[0],
+                a.end[1],
+                "NIC001 Implicitly concatenated string literals in one line",
+                None,
+            )
+        else:
+            yield (
+                a.end[0],
+                a.end[1],
+                "NIC002 Implicitly concatenated string literals over multiple lines",
+                None,
+            )
+    return
 
 
 class Checker:
@@ -61,3 +74,4 @@ class Checker:
         :yields: Errors found.
         """
         yield from _check(self.file_tokens)
+        return
