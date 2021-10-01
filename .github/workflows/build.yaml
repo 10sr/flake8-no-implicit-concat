@@ -18,14 +18,14 @@ jobs:
     if: github.event_name == 'release'
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Cache packages
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.cache
           key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-pipcache
       - name: Cache environment
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv
@@ -60,15 +60,15 @@ jobs:
       python_version_codecov: 3.9
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Cache packages
         # https://github.com/actions/cache/issues/152
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.cache
           key: ${{ runner.os }}-python${{ matrix.python-version }}-${{ hashFiles('**/Pipfile.lock') }}-pipcache }}
       - name: Cache environment
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-python${{ matrix.python-version }}-${{ hashFiles('**/Pipfile.lock') }}-venv }}
@@ -91,21 +91,21 @@ jobs:
           flake8 --version
           make test
       - name: Run codecov
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2
         if: matrix.python-version == env.python_version_codecov
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Cache packages
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.cache
           key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-pipcache
       - name: Cache environment
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv

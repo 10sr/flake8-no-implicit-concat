@@ -10,7 +10,7 @@
 flake8-no-implicit-concat
 =========================
 
-Flake8 plugin that forbids implicit string literal concatenations.
+[Flake8][] plugin that forbids implicit string literal concatenations.
 
     # NG
     a = "abc" "def"
@@ -37,9 +37,10 @@ Violation code
 
 The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 
-| Code   | Description                             |
-| ------ | --------------------------------------- |
-| NIC001 | Implicitly concatenated string literals |
+| Code   | Description                                                 |
+| ------ | ----------------------------------------------------------- |
+| NIC001 | Implicitly concatenated string literals in one line         |
+| NIC002 | Implicitly concatenated string literals over multiple lines |
 
 
 Other Plugins & Linters
@@ -64,7 +65,7 @@ Development
 
 Use tools like Pipenv:
 
-    pipenv run python -m pip install .[dev]
+    pipenv run python -m pip install -e .[dev]
     pipenv run make check
 
 
@@ -78,6 +79,7 @@ Dylan Turner and also licensed under MIT license.
 
 
 
+[Flake8]: https://flake8.pycqa.org/en/latest/
 [flake8-implicit-str-concat]: https://github.com/keisheiled/flake8-implicit-str-concat
 [wemake-python-styleguide]: https://github.com/wemake-services/wemake-python-styleguide
 [pylint]: https://github.com/PyCQA/pylint
