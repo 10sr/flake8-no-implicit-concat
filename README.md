@@ -37,9 +37,10 @@ Violation code
 
 The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 
-| Code   | Description                             |
-| ------ | --------------------------------------- |
-| NIC001 | Implicitly concatenated string literals |
+| Code   | Description                                                 |
+| ------ | ----------------------------------------------------------- |
+| NIC001 | Implicitly concatenated string literals in one line         |
+| NIC002 | Implicitly concatenated string literals over multiple lines |
 
 
 Other Plugins & Linters
