@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [0.2.0] - 2020-10-01
+
+### changed
+
+- Remove attrs from dependency list
+- Separate error code for concat over multiple lines
+
+
 ## [0.1.5] - 2020-08-19
 
 ### Added
@@ -63,7 +71,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.5...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.1.2...v0.1.3
