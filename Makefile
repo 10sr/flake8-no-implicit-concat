@@ -18,6 +18,7 @@ codecov:
 lint: mypy flake8
 
 flake8:
+	flake8 --version
 	flake8 .
 
 isortify:
