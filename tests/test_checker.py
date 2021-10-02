@@ -11,8 +11,8 @@ from typing import Tuple
 from flake8_no_implicit_concat import Checker
 
 
-def _tokenize(input: str) -> Iterable[tokenize.TokenInfo]:
-    return tokenize.tokenize(BytesIO(input.encode("utf-8")).readline)
+def _tokenize(input_: str) -> Iterable[tokenize.TokenInfo]:
+    return tokenize.tokenize(BytesIO(input_.encode("utf-8")).readline)
 
 
 class TestChecker(unittest.TestCase):
@@ -20,8 +20,8 @@ class TestChecker(unittest.TestCase):
 
     def test_noerror(self) -> None:
         """Test checker with valid input."""
-        input = "a = 'aaa'"
-        checker = Checker(ast.parse(input), _tokenize(input))
+        input_ = "a = 'aaa'"
+        checker = Checker(ast.parse(input_), _tokenize(input_))
         actual = list(checker.run())
         expected = []  # type: Iterable[Tuple[int, int, str, None]]
         self.assertEqual(actual, expected)
@@ -30,8 +30,8 @@ class TestChecker(unittest.TestCase):
     def test_error(self) -> None:
         """Test checker with invalid input."""
         # Detailed tests are done in run_flake8/Run.sh script
-        input = "a = 'aaa' 'bbb'"
-        checker = Checker(ast.parse(input), _tokenize(input))
+        input_ = "a = 'aaa' 'bbb'"
+        checker = Checker(ast.parse(input_), _tokenize(input_))
         actual = list(checker.run())
         expected = [
             (1, 9, "NIC001 Implicitly concatenated string literals in one line", None)
