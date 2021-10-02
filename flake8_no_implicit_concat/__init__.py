@@ -6,15 +6,16 @@ Forbid implicitly concatenated string literals in all cases.
 from __future__ import generator_stop
 
 import ast
+import sys
 import tokenize
 
 from typing import Iterable
 from typing import Tuple
 
-try:
-    from itertools import pairwise
-except ImportError:
+if sys.version_info < (3, 10):
     from more_itertools import pairwise
+else:
+    from itertools import pairwise
 
 from ._version import __version__
 
