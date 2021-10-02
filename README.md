@@ -48,16 +48,18 @@ Other Plugins & Linters
 
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
-  There are cases where this plugin prefers implicit concatenation over
-  explicit `+` operator , so these two plugins cannot be used in combination.
+  `flake-no-implicit-concat` plugin is different from this plugin
+  because there are cases where this plugin prefers implicit concatenations
+  over explicit `+` operators.
 - [**wemake-python-styleguide**][wemake-python-styleguide]
-  Set of strict flake8 rules with some other plugins as dependencies.
+  Set of strict flake8 rules with several plugins as dependencies.
   It implements `WPS326 Found implicit string concatenation`, which also
-  checks implicit string concatenations, as one of the many rules it has.
-- [**pylint**][pylint] This linter has `implicit-str-concat` rule.
+  checks implicit string concatenations, as one of the many rules it defines.
+- [**pylint**][pylint] 
+  This linter has `implicit-str-concat` rule.
   By default it only looks for occurrences of implicit concatenations on the
-  same line, but you can give the `--check-str-concat-over-line-jumps=y` option
-  for concatenations over multiple lines.
+  same line, but there is an option `--check-str-concat-over-line-jumps=y`
+  to enable checking of concatenations over multiple lines.
 
 
 Development
