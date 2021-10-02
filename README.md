@@ -58,7 +58,7 @@ Other Plugins & Linters
 - [**pylint**][pylint] 
   This linter has `implicit-str-concat` rule.
   By default it only looks for occurrences of implicit concatenations on the
-  same line, but there is `--check-str-concat-over-line-jumps=y` option
+  same line, but it has `--check-str-concat-over-line-jumps=y` option
   to enable checking of concatenations over multiple lines.
 
 
