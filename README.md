@@ -48,7 +48,7 @@ Other Plugins & Linters
 
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
-  `flake-no-implicit-concat` plugin is different from this plugin
+  `flake8-no-implicit-concat` is different from this plugin
   because there are cases where this plugin prefers implicit concatenations
   over explicit `+` operators.
 - [**wemake-python-styleguide**][wemake-python-styleguide]
