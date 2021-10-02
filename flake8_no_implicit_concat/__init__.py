@@ -1,5 +1,4 @@
-"""
-Flake8 plugin that forbids implicit string literal concatenations.
+"""Flake8 plugin that forbids implicit string literal concatenations.
 
 Forbid implicitly concatenated string literals in all cases.
 """
