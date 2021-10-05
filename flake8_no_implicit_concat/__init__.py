@@ -5,7 +5,6 @@ Forbid implicitly concatenated string literals in all cases.
 
 from __future__ import generator_stop
 
-import ast
 import tokenize
 
 from typing import Iterable
@@ -57,13 +56,11 @@ class Checker:
     name = "no_implicit_concat"
     version = __version__
 
-    def __init__(self, tree: ast.AST, file_tokens: Iterable[tokenize.TokenInfo]):
+    def __init__(self, file_tokens: Iterable[tokenize.TokenInfo]):
         """Intialize Checker.
 
-        :param tree: File AST
         :param file_tokens: File tokens
         """
-        self.tree = tree
         self.file_tokens = file_tokens
         return
 
