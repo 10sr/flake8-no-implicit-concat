@@ -1,6 +1,5 @@
 """Test NIC Chekcer."""
 
-import ast
 import tokenize
 import unittest
 
@@ -21,7 +20,7 @@ class TestChecker(unittest.TestCase):
     def test_noerror(self) -> None:
         """Test checker with valid input."""
         input_ = "a = 'aaa'"
-        checker = Checker(ast.parse(input_), _tokenize(input_))
+        checker = Checker(_tokenize(input_))
         actual = list(checker.run())
         expected = []  # type: Iterable[Tuple[int, int, str, None]]
         self.assertEqual(actual, expected)
@@ -31,7 +30,7 @@ class TestChecker(unittest.TestCase):
         """Test checker with invalid input."""
         # Detailed tests are done in run_flake8/Run.sh script
         input_ = "a = 'aaa' 'bbb'"
-        checker = Checker(ast.parse(input_), _tokenize(input_))
+        checker = Checker(_tokenize(input_))
         actual = list(checker.run())
         expected = [
             (1, 9, "NIC001 Implicitly concatenated string literals in one line", None)
