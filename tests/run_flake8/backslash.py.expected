@@ -1,1 +1,1 @@
-./backslash.py:1:10: NIC002 Implicitly concatenated string literals over multiple lines
+./backslash.py:1:10: NIC002 Implicitly concatenated str literals over multiple lines
