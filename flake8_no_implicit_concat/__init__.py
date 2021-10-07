@@ -12,7 +12,7 @@ import tokenize
 from typing import Iterable
 from typing import Tuple
 
-if sys.version_info < (3, 10):
+if sys.version_info < (3, 10):  # pragma: no cover
     from more_itertools import pairwise
 else:
     from itertools import pairwise
