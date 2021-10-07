@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test, lint]
     if: github.event_name == 'release'
+    env:
+      python_version_codecov: "3.10"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -23,16 +25,16 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-pipcache
+          key: ${{ runner.os }}-python${{ env.python_version_codecov }}-${{ hashFiles('**/Pipfile.lock') }}-pipcache
       - name: Cache environment
         uses: actions/cache@v2
         with:
           path: ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-python3.9-${{ hashFiles('**/Pipfile.lock') }}-venv
+          key: ${{ runner.os }}-python${{ env.python_version_codecov }}-${{ hashFiles('**/Pipfile.lock') }}-venv
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: ${{ env.python_version_codecov }}
       - name: Install denendencies
         run: |
           set -eux
