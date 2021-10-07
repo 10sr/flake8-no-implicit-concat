@@ -1,7 +1,4 @@
-"""Flake8 plugin that forbids implicit string literal concatenations.
-
-Forbid implicitly concatenated string literals in all cases.
-"""
+"""Flake8 plugin that forbids implicit str/bytes literal concatenations."""
 
 from __future__ import generator_stop
 

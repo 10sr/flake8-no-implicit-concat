@@ -10,18 +10,21 @@
 flake8-no-implicit-concat
 =========================
 
-[Flake8][] plugin that forbids implicit string literal concatenations.
+[Flake8][] plugin that forbids implicit str/bytes literal concatenations.
 
     # NG
     a = "abc" "def"
     b = ["aaa",
          "bbb"
          "ccc"]
+    c = b"hoge" b"fuga"
+
     # OK
     a = "abcdef"
     b = ["aaa",
          "bbb" +
          "ccc"]
+    c = b"hogefuga"
 
 
 Installation
@@ -37,10 +40,12 @@ Violation code
 
 The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 
-| Code   | Description                                                 |
-| ------ | ----------------------------------------------------------- |
-| NIC001 | Implicitly concatenated string literals in one line         |
-| NIC002 | Implicitly concatenated string literals over multiple lines |
+| Code   | Description                                                |
+| ------ | ---------------------------------------------------------- |
+| NIC001 | Implicitly concatenated str literals on one line           |
+| NIC002 | Implicitly concatenated str literals over multiple lines   |
+| NIC101 | Implicitly concatenated bytes literals on one line         |
+| NIC102 | Implicitly concatenated bytes literals over multiple lines |
 
 
 Other Plugins & Linters
@@ -48,9 +53,9 @@ Other Plugins & Linters
 
 - [**flake8-implicit-str-concat**][flake8-implicit-str-concat]
   Flake8 plugin to encourage correct string literal concatenation.
-  `flake8-no-implicit-concat` is different from this plugin
-  because there are cases where this plugin prefers implicit concatenations
-  over explicit `+` operators.
+  This plugin is different from `flake8-no-implicit-concat`
+  because this plugin prefers implicit concatenations over explicit `+`
+  operators when concatenating literals over multiple lines.
 - [**wemake-python-styleguide**][wemake-python-styleguide]
   Set of strict flake8 rules with several plugins as dependencies.
   It implements `WPS326 Found implicit string concatenation`, which also
