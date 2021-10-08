@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Separate error codes for bytes literal concatenations
 
 
-## [0.2.1] - 2020-10-01
+## [0.2.1] - 2020-10-07
 
 ### Added
 
