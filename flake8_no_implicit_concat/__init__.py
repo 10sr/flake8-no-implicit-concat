@@ -1,7 +1,4 @@
-"""Flake8 plugin that forbids implicit string literal concatenations.
-
-Forbid implicitly concatenated string literals in all cases.
-"""
+"""Flake8 plugin that forbids implicit str/bytes literal concatenations."""
 
 from __future__ import generator_stop
 
@@ -22,6 +19,18 @@ from ._version import __version__
 _ERROR = Tuple[int, int, str, None]
 
 
+_ERROR_CODES = {  # [on_one_line][is_bytes]
+    True: {
+        True: "NIC101 Implicitly concatenated bytes literals on one line",
+        False: "NIC001 Implicitly concatenated str literals on one line",
+    },
+    False: {
+        True: "NIC102 Implicitly concatenated bytes literals over multiple lines",
+        False: "NIC002 Implicitly concatenated str literals over multiple lines",
+    },
+}
+
+
 def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
     tokens_wo_ws = (
         e
@@ -38,20 +47,12 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
     for (a, b) in pairwise(tokens_wo_ws):
         if not (a.type == b.type == tokenize.STRING):
             continue
-        if a.end[0] == b.start[0]:
-            yield (
-                a.end[0],
-                a.end[1],
-                "NIC001 Implicitly concatenated string literals in one line",
-                None,
-            )
-        else:
-            yield (
-                a.end[0],
-                a.end[1],
-                "NIC002 Implicitly concatenated string literals over multiple lines",
-                None,
-            )
+
+        on_one_line = a.end[0] == b.start[0]
+        is_bytes = a.string.startswith("b")
+        error_code = _ERROR_CODES[on_one_line][is_bytes]
+
+        yield (a.end[0], a.end[1], error_code, None)
     return
 
 

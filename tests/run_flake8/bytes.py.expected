@@ -1,0 +1,2 @@
+./bytes.py:1:11: NIC101 Implicitly concatenated bytes literals on one line
+./bytes.py:3:12: NIC102 Implicitly concatenated bytes literals over multiple lines

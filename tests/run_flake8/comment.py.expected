@@ -1,1 +1,1 @@
-./comment.py:1:11: NIC002 Implicitly concatenated string literals over multiple lines
+./comment.py:1:11: NIC002 Implicitly concatenated str literals over multiple lines
