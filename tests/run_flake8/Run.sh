@@ -6,8 +6,9 @@ cd "$dir"
 
 for py in ./*.py
 do
-    # Python3.5 does not support f-string so skip it
-    if [[ "`python -V`" =~ ^Python\ 3\.5 && "$py" =~ fstring ]]
+    # Python<3.6 does not support f-string so skip it
+    if python -c 'import sys; assert sys.version_info < (3, 6)' \
+            && [[ "$py" =~ fstring ]]
     then
         continue
     fi
