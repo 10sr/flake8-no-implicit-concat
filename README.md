@@ -35,8 +35,8 @@ Install via pip:
     pip install flake8-no-implicit-concat
 
 
-Violation code
---------------
+Violation codes
+---------------
 
 The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
 
