@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Separate error code for concat over multiple lines
 
 
-## [0.1.5] - 2020-08-19
+## [0.1.5] - 2021-09-20
 
 ### Added
 
