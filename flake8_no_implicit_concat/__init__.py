@@ -1,7 +1,5 @@
 """Flake8 plugin that forbids implicit str/bytes literal concatenations."""
 
-from __future__ import generator_stop
-
 import ast
 import sys
 import tokenize
@@ -53,7 +51,6 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
         error_code = _ERROR_CODES[on_one_line][is_bytes]
 
         yield (a.end[0], a.end[1], error_code, None)
-    return
 
 
 class Checker:
@@ -78,4 +75,3 @@ class Checker:
         :yields: Errors found.
         """
         yield from _check(self.file_tokens)
-        return
