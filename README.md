@@ -1,9 +1,8 @@
-[![Github Actions](https://github.com/10sr/flake8-no-implicit-concat/workflows/build/badge.svg?event=push)](https://github.com/10sr/flake8-no-implicit-concat/actions)
-[![codecov](https://codecov.io/gh/10sr/flake8-no-implicit-concat/branch/master/graph/badge.svg)](https://codecov.io/gh/10sr/flake8-no-implicit-concat)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flake8-no-implicit-concat)
 [![PyPI version](https://badge.fury.io/py/flake8-no-implicit-concat.svg)](https://badge.fury.io/py/flake8-no-implicit-concat)
-[![Downloads](https://pepy.tech/badge/flake8-no-implicit-concat)](https://pepy.tech/project/flake8-no-implicit-concat)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flake8-no-implicit-concat)
+[![Downloads](https://pepy.tech/badge/flake8-no-implicit-concat/month)](https://pepy.tech/project/flake8-no-implicit-concat)
+[![Github Actions](https://github.com/10sr/flake8-no-implicit-concat/workflows/build/badge.svg?event=push)](https://github.com/10sr/flake8-no-implicit-concat/actions)
+[![Codecov](https://codecov.io/gh/10sr/flake8-no-implicit-concat/branch/master/graph/badge.svg)](https://codecov.io/gh/10sr/flake8-no-implicit-concat)
 
 
 
@@ -35,7 +34,7 @@ Install via pip:
     pip install flake8-no-implicit-concat
 
 
-Violation codes
+Violation Codes
 ---------------
 
 The plugin uses the prefix `NIC`, short for No Implicit Concatenation.
