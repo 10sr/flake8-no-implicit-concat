@@ -74,10 +74,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Update pip and setuptools (py35 only)
-        # setuptools bundled with py35 cannot read metadata in setup.cfg
-        run: pip install --upgrade pip setuptools
-        if: matrix.python-version == '3.5'
       - name: Install denendencies
         run: |
           set -eux
