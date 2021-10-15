@@ -56,7 +56,7 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
 class Checker:
     """NIC Checker definition."""
 
-    name = "no_implicit_concat"
+    name = "no-implicit-concat"
     version = __version__
 
     def __init__(self, tree: ast.AST, file_tokens: Iterable[tokenize.TokenInfo]):
