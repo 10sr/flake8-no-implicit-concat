@@ -29,7 +29,7 @@ class TestChecker(unittest.TestCase):
 
     def test_error(self) -> None:
         """Test checker with invalid input."""
-        # Detailed tests are done in run_flake8/Run.sh script
+        # More test cases are defined in run_flake8/Run.sh script
         input_ = "a = 'aaa' 'bbb'"
         checker = Checker(ast.parse(input_), _tokenize(input_))
         actual = list(checker.run())
