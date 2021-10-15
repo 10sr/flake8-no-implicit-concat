@@ -6,3 +6,5 @@ build/
 dist/
 .coverage
 coverage.xml
+Pipfile
+Pipfile.lock

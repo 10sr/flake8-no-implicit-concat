@@ -8,22 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
 
-## [0.3.0] - 2020-10-11
+- Add Python 3.3 and 3.4 support
+
+
+## [0.3.0] - 2021-10-11
 
 ### Changed
 
 - Separate error codes for bytes literal concatenations
 
 
-## [0.2.1] - 2020-10-07
+## [0.2.1] - 2021-10-07
 
 ### Added
 
-- Add python 3.10 support
+- Add Python 3.10 support
 
 
-## [0.2.0] - 2020-10-01
+## [0.2.0] - 2021-10-01
 
 ### changed
 
@@ -35,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add python 3.9 support
+- Add Python 3.9 support
 
 
 ## [0.1.4] - 2020-08-19
