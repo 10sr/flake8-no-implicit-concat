@@ -14,7 +14,4 @@ def _get_version() -> str:
     raise RuntimeError("Unable to find version string.")
 
 
-setup(
-    version=_get_version(),
-    entry_points={"flake8.extension": ["NIC = flake8_no_implicit_concat:Checker"]},
-)
+setup(version=_get_version())
