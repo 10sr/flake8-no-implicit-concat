@@ -22,7 +22,7 @@ flake8:
 	flake8 .
 
 isortify:
-	isort -rc .
+	isort .
 
 blacken:
 	black .
