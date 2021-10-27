@@ -47,7 +47,10 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
             continue
 
         on_one_line = a.end[0] == b.start[0]
-        is_bytes = a.string.startswith("b")
+
+        literal_prefix = a.string.partition("'")[0].partition('"')[0]
+        is_bytes = "b" in literal_prefix
+
         error_code = _ERROR_CODES[on_one_line][is_bytes]
 
         yield (a.end[0], a.end[1], error_code, None)
