@@ -6,7 +6,6 @@ import unittest
 
 from io import BytesIO
 from typing import Iterable
-from typing import Tuple
 
 from flake8_no_implicit_concat import Checker
 
@@ -22,21 +21,17 @@ class TestChecker(unittest.TestCase):
         """Test checker with valid input."""
         input_ = "a = 'aaa'"
         checker = Checker(ast.parse(input_), _tokenize(input_))
-        actual = list(checker.run())
-        expected = []  # type: Iterable[Tuple[int, int, str, None]]
-        self.assertEqual(actual, expected)
+        result = checker.run()
+        self.assertEqual(len(list(result)), 0)
         return
 
     def test_error(self) -> None:
         """Test checker with invalid input."""
-        # More test cases are defined in run_flake8/Run.sh script
+        # Contents of results are checked in run_flake8/
         input_ = "a = 'aaa' 'bbb'"
         checker = Checker(ast.parse(input_), _tokenize(input_))
-        actual = list(checker.run())
-        expected = [
-            (1, 9, "NIC001 Implicitly concatenated str literals on one line", None)
-        ]
-        self.assertEqual(actual, expected)
+        result = checker.run()
+        self.assertEqual(len(list(result)), 1)
         return
 
 
