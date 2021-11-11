@@ -11,9 +11,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Fix error code for bytes literals prefixed with 'rb'
 
-### Changed
-
--  Use kebab case for checker name 
 
 
 ## [0.3.1] - 2021-10-15
