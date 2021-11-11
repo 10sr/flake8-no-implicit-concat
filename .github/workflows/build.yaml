@@ -7,7 +7,7 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches:
-      - 'master'
+      - master
   release:
     types: [published]
 
@@ -18,7 +18,7 @@ jobs:
     needs: [test, lint]
     if: github.event_name == 'release'
     env:
-      python_version_codecov: "3.10"
+      python_version_publish: "3.10"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -26,11 +26,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-python${{ env.python_version_codecov }}-${{ hashFiles('**/Pipfile.lock') }}-pipcache
+          key: ${{ runner.os }}-python${{ env.python_version_publish }}-pipcache
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ env.python_version_codecov }}
+          python-version: ${{ env.python_version_publish }}
       - name: Install denendencies
         run: |
           set -eux
@@ -71,7 +71,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-python${{ matrix.python-version }}-${{ hashFiles('**/Pipfile.lock') }}-pipcache }}
+          key: ${{ runner.os }}-python${{ matrix.python-version }}-pipcache
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -94,7 +94,7 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     env:
-      python_version_codecov: "3.10"
+      python_version_lint: "3.10"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -102,11 +102,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-python${{ env.python_version_codecov }}-${{ hashFiles('**/Pipfile.lock') }}-pipcache
+          key: ${{ runner.os }}-python${{ env.python_version_lint }}-pipcache
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ env.python_version_codecov }}
+          python-version: ${{ env.python_version_lint }}
       - name: Install denendencies
         run: |
           set -eux
