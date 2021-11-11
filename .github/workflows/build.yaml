@@ -7,7 +7,7 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches:
-      - 'master'
+      - master
   release:
     types: [published]
 
@@ -71,7 +71,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-python${{ matrix.python-version }}-pipcache }}
+          key: ${{ runner.os }}-python${{ matrix.python-version }}-pipcache
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
