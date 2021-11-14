@@ -9,3 +9,4 @@ l = ["hhh",
 noqa = "k" "l"  # noqa: NIC001
 noqa = ("k"  # noqa: NIC002
         "l")
+print("abc" + "def", "ghi")

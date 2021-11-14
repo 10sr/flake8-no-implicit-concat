@@ -1,2 +1,0 @@
-./list.py:2:11: NIC002 Implicitly concatenated str literals over multiple lines
-./list.py:8:15: NIC002 Implicitly concatenated str literals over multiple lines

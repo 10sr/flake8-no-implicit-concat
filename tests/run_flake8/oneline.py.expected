@@ -1,3 +1,4 @@
 ./oneline.py:1:10: NIC001 Implicitly concatenated str literals on one line
 ./oneline.py:2:10: NIC001 Implicitly concatenated str literals on one line
 ./oneline.py:3:10: NIC001 Implicitly concatenated str literals on one line
+./oneline.py:4:12: NIC001 Implicitly concatenated str literals on one line
