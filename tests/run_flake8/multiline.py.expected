@@ -1,0 +1,4 @@
+./multiline.py:2:11: NIC002 Implicitly concatenated str literals over multiple lines
+./multiline.py:5:11: NIC002 Implicitly concatenated str literals over multiple lines
+./multiline.py:11:15: NIC002 Implicitly concatenated str literals over multiple lines
+./multiline.py:15:12: NIC002 Implicitly concatenated str literals over multiple lines

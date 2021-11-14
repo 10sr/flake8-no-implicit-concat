@@ -16,15 +16,15 @@ flake8-no-implicit-concat
     b = ["aaa",
          "bbb"
          "ccc"]
-    c = b'hoge' b'fuga'
+    print(b'foo' b'bar', b'baz')
 
     # OK
     a = 'abcdef'
     b = ["aaa",
          "bbb" +
          "ccc"]
-    c = b'hogefuga'
-
+    print(b'foobar', b'baz')
+ 
 
 Installation
 ------------
