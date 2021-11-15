@@ -12,18 +12,18 @@ flake8-no-implicit-concat
 [Flake8][] plugin that forbids implicit str/bytes literal concatenations.
 
     # NG
-    a = 'abc' 'def'
-    b = ["aaa",
+    print('foo' 'bar', 'baz')
+    a = ["aaa",
          "bbb"
          "ccc"]
-    print(b'foo' b'bar', b'baz')
+    b = b'abc' b'def'
 
     # OK
-    a = 'abcdef'
-    b = ["aaa",
+    print('foobar', 'baz')
+    a = ["aaa",
          "bbb" +
          "ccc"]
-    print(b'foobar', b'baz')
+    b = b'abcdef'
  
 
 Installation
