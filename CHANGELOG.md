@@ -8,6 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 
+## [0.3.3] - 2021-12-15
+
+### Fixed
+
+- Remove more-itertools version constraint
+
+
 ## [0.3.2] - 2021-11-16
 
 ### Fixed
@@ -99,7 +106,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First release
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.2...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.3...HEAD
+[0.3.3]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.2.1...v0.3.0
