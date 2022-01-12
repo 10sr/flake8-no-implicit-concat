@@ -21,8 +21,8 @@ flake8-no-implicit-concat
     # OK
     print('foobar', 'baz')
     a = ["aaa",
-         "bbb" +
-         "ccc"]
+         "bbb"
+         + "ccc"]
     b = b'abcdef'
  
 
