@@ -78,10 +78,10 @@ Use tools like Pipenv:
 License
 -------
 
-This software is licensed under MIT license. See `LICENSE` for details.
+This software is released under MIT license. See `LICENSE` for details.
 
 The code was derived from [flake8-implicit-str-concat][], which is developed by
-Dylan Turner and also licensed under MIT license.
+Dylan Turner and also released under MIT license.
 
 
 
