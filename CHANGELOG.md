@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - Remove more-itertools version constraint
-
+  - Because more-itertools 8.11.0 has been yanked
 
 ## [0.3.2] - 2021-11-16
 
