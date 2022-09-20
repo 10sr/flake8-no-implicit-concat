@@ -53,6 +53,8 @@ jobs:
     timeout-minutes: 5
     strategy:
       matrix:
+        # Available versions:
+        # https://github.com/actions/python-versions/blob/main/versions-manifest.json
         python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "pypy-3.7"]
         runs-on: [ubuntu-latest]
         include:
