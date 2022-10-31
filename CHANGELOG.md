@@ -8,6 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 
+## [0.3.4] - 2022-10-31
+
+### Added
+
+- Add Python 3.11 to classifier list
+
+
 ## [0.3.3] - 2021-12-15
 
 ### Fixed
@@ -15,12 +22,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Remove more-itertools version constraint
   - Because more-itertools 8.11.0 has been yanked
 
+
 ## [0.3.2] - 2021-11-16
 
 ### Fixed
 
 - Fix error code for bytes literals prefixed with 'rb'
-
 
 
 ## [0.3.1] - 2021-10-15
@@ -106,7 +113,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First release
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.3...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.4...HEAD
+[0.3.4]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.0...v0.3.1
