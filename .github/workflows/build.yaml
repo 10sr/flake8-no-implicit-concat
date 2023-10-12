@@ -55,7 +55,7 @@ jobs:
       matrix:
         # Available versions:
         # https://github.com/actions/python-versions/blob/main/versions-manifest.json
-        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "pypy-3.7"]
+        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "pypy-3.7"]
         runs-on: [ubuntu-latest]
         include:
           - python-version: "3.4"
