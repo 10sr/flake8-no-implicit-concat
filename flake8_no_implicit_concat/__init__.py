@@ -29,6 +29,27 @@ _ERROR_CODES = {  # [on_one_line][is_bytes]
 }
 
 
+def _is_ok_lt_py312(a: tokenize.TokenInfo, b: tokenize.TokenInfo) -> bool:
+    return not a.type == b.type == tokenize.STRING
+
+
+def _is_ok(a: tokenize.TokenInfo, b: tokenize.TokenInfo) -> bool:
+    if a.type == b.type == tokenize.STRING:
+        return False
+    if a.type == tokenize.STRING and b.type == tokenize.FSTRING_START:  # type: ignore[attr-defined]
+        return False
+    if a.type == tokenize.FSTRING_END and b.type == tokenize.STRING:  # type: ignore[attr-defined]
+        return False
+    if a.type == tokenize.FSTRING_END and b.type == tokenize.FSTRING_START:  # type: ignore[attr-defined]
+        return False
+    return True
+
+
+if sys.version_info < (3, 12):  # pragma: no cover
+    # E811 redefinition of unused '_is_ok' from line 36
+    _is_ok = _is_ok_lt_py312  # noqa
+
+
 def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
     tokens_wo_ws = (
         e
@@ -43,7 +64,7 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
         )
     )
     for a, b in pairwise(tokens_wo_ws):
-        if not (a.type == b.type == tokenize.STRING):
+        if _is_ok(a, b):
             continue
 
         on_one_line = a.end[0] == b.start[0]
