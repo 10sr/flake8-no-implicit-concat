@@ -42,7 +42,7 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
             tokenize.COMMENT,
         )
     )
-    for (a, b) in pairwise(tokens_wo_ws):
+    for a, b in pairwise(tokens_wo_ws):
         if not (a.type == b.type == tokenize.STRING):
             continue
 
