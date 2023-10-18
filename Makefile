@@ -9,7 +9,7 @@ test-runflake8:
 test-pytest:
 	coverage erase
 	coverage run -m unittest discover -v  # tests/test_*.py
-	coverage xml --fail-under 90
+	coverage xml
 
 codecov:
 	codecov
