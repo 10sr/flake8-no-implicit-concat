@@ -18,7 +18,7 @@ jobs:
     needs: [test, lint]
     if: github.event_name == 'release'
     env:
-      python_version_publish: "3.10"
+      python_version_publish: "3.12"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -55,7 +55,7 @@ jobs:
       matrix:
         # Available versions:
         # https://github.com/actions/python-versions/blob/main/versions-manifest.json
-        python-version: ["3.10", "3.11", "pypy-3.7"]
+        python-version: ["3.10", "3.11", "3.12", "pypy-3.7"]
         runs-on: [ubuntu-latest]
         include:
           - python-version: "3.9"
@@ -69,7 +69,7 @@ jobs:
           - python-version: "3.5"
             runs-on: ubuntu-20.04
     env:
-      python_version_codecov: "3.11"
+      python_version_codecov: "3.12"
     runs-on: ${{ matrix.runs-on }}
     steps:
       - name: Checkout
@@ -102,7 +102,7 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     env:
-      python_version_lint: "3.10"
+      python_version_lint: "3.12"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
