@@ -8,6 +8,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+
+## [0.3.5] - 2023-10-22
+
+### Added
+
+- Add Python 3.12 support
+
+### Removed
+
+- Drop support for Python 3.3 & 3.4
+
+### Fixed
+
+- Fix check for f-strings on Python 3.12
+  - Prior to this version, this plugin cannot find implicit concats
+    when using Python 3.12 and f-strings are involved
+
+
 ## [0.3.4] - 2022-10-31
 
 ### Added
@@ -113,7 +143,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First release
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.4...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.5...HEAD
+[0.3.5]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.1...v0.3.2
