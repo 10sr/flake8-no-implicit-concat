@@ -1,1 +1,3 @@
-./fstring.py:2:17: NIC002 Implicitly concatenated str literals over multiple lines
+./fstring.py:2:15: NIC002 Implicitly concatenated str literals over multiple lines
+./fstring.py:4:11: NIC002 Implicitly concatenated str literals over multiple lines
+./fstring.py:6:15: NIC002 Implicitly concatenated str literals over multiple lines
