@@ -1,4 +1,9 @@
 v = "vvv"
-a = [f"aaa{vvv}"
+a = [f"aaa{v}"
      "bbb"]
-print(a)
+b = ["ccc"
+     f"ddd{v}"]
+c = [f"eee{v}"
+     f"fff{v}"]
+d = f""
+print(a, b, c, d)
