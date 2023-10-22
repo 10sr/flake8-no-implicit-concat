@@ -1,4 +1,4 @@
-check: test lint 
+check: test lint
 
 test: test-runflake8 test-pytest
 
@@ -46,4 +46,4 @@ publish: sdist wheel
 # Do not add to devdependencies because different platforms install
 # different packages
 publish-installdeps:
-	pip install twine wheel
+	pip install twine wheel setuptools
