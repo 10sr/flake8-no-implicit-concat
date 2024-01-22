@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cache packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache
           key: ${{ runner.os }}-python${{ env.python_version_publish }}-pipcache
@@ -76,7 +76,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Cache packages
         # https://github.com/actions/cache/issues/152
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache
           key: ${{ runner.os }}-python${{ matrix.python-version }}-pipcache
@@ -107,7 +107,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cache packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache
           key: ${{ runner.os }}-python${{ env.python_version_lint }}-pipcache
