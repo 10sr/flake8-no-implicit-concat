@@ -95,7 +95,7 @@ jobs:
           flake8 --version
           make test
       - name: Run codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         if: matrix.python-version == env.python_version_codecov
 
   lint:
