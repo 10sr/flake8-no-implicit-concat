@@ -11,7 +11,7 @@ flake8-no-implicit-concat
 
 [Flake8][] plugin that forbids implicit str/bytes literal concatenations.
 
-    # NG
+    # Not Allowed
     print('foo' 'bar', 'baz')
     a = ["aaa",
          "bbb"
