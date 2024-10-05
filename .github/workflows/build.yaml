@@ -66,8 +66,6 @@ jobs:
             runs-on: ubuntu-20.04
           - python-version: "3.6"
             runs-on: ubuntu-20.04
-          - python-version: "3.5"
-            runs-on: ubuntu-20.04
     env:
       python_version_codecov: "3.12"
     runs-on: ${{ matrix.runs-on }}
