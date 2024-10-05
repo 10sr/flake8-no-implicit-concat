@@ -57,7 +57,6 @@ def _check(tokens: Iterable[tokenize.TokenInfo]) -> Iterable[_ERROR]:
         if e.type
         not in (
             tokenize.NL,
-            tokenize.NEWLINE,
             tokenize.INDENT,
             tokenize.DEDENT,
             tokenize.COMMENT,
