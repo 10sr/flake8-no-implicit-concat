@@ -34,7 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- Fix alse positive with class attribute string value and docstring
+- Fix false positive with class attribute string value and docstring
 
 
 
