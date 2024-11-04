@@ -8,3 +8,4 @@ dist/
 coverage.xml
 Pipfile
 Pipfile.lock
+_version.py
