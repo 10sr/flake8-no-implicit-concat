@@ -39,7 +39,7 @@ sdist:
 wheel:
 	python setup.py bdist_wheel
 
-publish_repository ?= testpypi
+publish_repository ?= testpypi  # Set to pypi to publish as production
 publish: sdist wheel
 	twine upload --repository $(publish_repository) dist/*
 
