@@ -21,6 +21,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Security
 
 
+## [0.3.6] - 2024-11-04
+
+
+### Added
+
+- Add Python 3.13 support
+
+### Removed
+
+- Drop Python 3.5 support
+
+### Fixed
+
+- Fix alse positive with class attribute string value and docstring
+
+
+
 ## [0.3.5] - 2023-10-22
 
 ### Added
@@ -143,7 +160,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First release
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.5...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.6...HEAD
+[0.3.6]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.2...v0.3.3
