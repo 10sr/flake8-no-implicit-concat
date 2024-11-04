@@ -12,7 +12,10 @@ if sys.version_info < (3, 10):  # pragma: no cover
 else:
     from itertools import pairwise
 
-from ._version import __version__
+try:
+    from ._version import __version__
+except ImportError:
+    __version__ = "N/A"
 
 _ERROR = Tuple[int, int, str, None]
 
