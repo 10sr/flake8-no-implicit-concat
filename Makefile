@@ -41,7 +41,7 @@ wheel:
 
 publish_repository ?= testpypi  # Set to pypi to publish as production
 publish: sdist wheel
-	twine upload --verbose --repository $(publish_repository) dist/*
+	twine upload --skip-existing --verbose --repository $(publish_repository) dist/*
 
 # Do not add to devdependencies because different platforms install
 # different packages
