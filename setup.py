@@ -4,4 +4,9 @@
 
 from setuptools import setup
 
-setup(use_scm_version={"write_to": "flake8_no_implicit_concat/_version.py"})
+setup(
+    use_scm_version={
+        "write_to": "flake8_no_implicit_concat/_version.py",
+        "local_scheme": "no-local-version",
+    }
+)
