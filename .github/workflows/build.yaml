@@ -43,10 +43,10 @@ jobs:
           set -eux
           test refs/tags/v`python3 ./setup.py --version` == "${{ github.ref }}"
       - name: Publish to pypi
-        run: make publish publish_repository=pypi
+        run: make publish publish_repository=testpypi
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+          TWINE_PASSWORD: ${{ secrets.TESTPYPI_TOKEN }}
 
   test:
     timeout-minutes: 5
