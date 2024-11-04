@@ -38,11 +38,17 @@ jobs:
               make publish-installdeps
           fi
           twine --version
-      - name: Publish to pypi
+      - name: Publish to testpypi
         run: make publish publish_repository=testpypi
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.TESTPYPI_TOKEN }}
+      - name: Publish to pypi
+        if: github.ref_type == 'tag'
+        run: make publish publish_repository=pypi
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
 
   test:
     timeout-minutes: 5
