@@ -21,12 +21,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Security
 
 
-## [0.3.6] - 2024-11-04
-
+## [0.3.7] - 2024-11-05
 
 ### Added
 
-- Add Python 3.13 support
+- Add Python 3.13 to classifiers list
+
+
+## [0.3.6] - 2024-11-04
 
 ### Removed
 
@@ -160,7 +162,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First release
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.6...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.7...HEAD
+[0.3.7]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.3...v0.3.4
