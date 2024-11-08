@@ -71,7 +71,7 @@ Development
 
 Use tools like Pipenv:
 
-    pipenv run python -m pip install -e .[dev,lint]
+    pipenv run python -m pip install -e .[test,lint]
     pipenv run make check
 
 
