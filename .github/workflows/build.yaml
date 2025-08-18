@@ -20,7 +20,7 @@ jobs:
       python_version_publish: "3.13"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Cache packages
         uses: actions/cache@v4
         with:
@@ -67,7 +67,7 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Cache packages
         # https://github.com/actions/cache/issues/152
         uses: actions/cache@v4
@@ -95,7 +95,7 @@ jobs:
       python_version_lint: "3.13"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Cache packages
         uses: actions/cache@v4
         with:
