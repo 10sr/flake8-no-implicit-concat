@@ -1,5 +1,6 @@
 include README.md
 include Makefile
+include flake8_no_implicit_concat/py.typed
 
 graft tests
 
