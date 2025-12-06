@@ -33,12 +33,10 @@ mypy:
 
 
 
-sdist:
-	python setup.py sdist
+build:
+	python -m build
 
-wheel:
-	python setup.py bdist_wheel
-
+# https://test.pypi.org/project/flake8-no-implicit-concat
 publish_repository ?= testpypi  # Set to pypi to publish as production
-publish: sdist wheel
+publish: build
 	twine upload --skip-existing --verbose --repository $(publish_repository) dist/*
