@@ -1,3 +1,8 @@
+.PHONY: check test test-runflake8 test-pytest codecov \
+	lint flake8 mypy \
+	isortify blacken \
+	build publish
+
 check: test lint
 
 test: test-runflake8 test-pytest
@@ -33,12 +38,10 @@ mypy:
 
 
 
-sdist:
-	python setup.py sdist
+build:
+	python -m build
 
-wheel:
-	python setup.py bdist_wheel
-
+# https://test.pypi.org/project/flake8-no-implicit-concat
 publish_repository ?= testpypi  # Set to pypi to publish as production
-publish: sdist wheel
+publish: build
 	twine upload --skip-existing --verbose --repository $(publish_repository) dist/*
