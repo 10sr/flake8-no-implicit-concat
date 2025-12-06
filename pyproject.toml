@@ -1,3 +1,10 @@
 [build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+requires = ["setuptools>=80", "wheel", "setuptools_scm[simple]>=8.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+version_file = "flake8_no_implicit_concat/_version.py"
+local_scheme = "no-local-version"
