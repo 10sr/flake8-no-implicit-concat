@@ -13,7 +13,7 @@ else:
     from itertools import pairwise
 
 try:
-    from ._version import __version__
+    from ._version import __version__  # type: ignore
 except ImportError:
     __version__ = "N/A"
 
