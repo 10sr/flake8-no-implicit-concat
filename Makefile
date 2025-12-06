@@ -1,3 +1,8 @@
+.PHONY: check test test-runflake8 test-pytest codecov \
+	lint flake8 mypy \
+	isortify blacken \
+	build publish
+
 check: test lint
 
 test: test-runflake8 test-pytest
