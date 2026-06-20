@@ -73,6 +73,10 @@ Use tools like Pipenv:
 
     pipenv run python -m pip install -e .[test,lint]
     pipenv run make check
+    # uv example
+    uv venv
+    uv pip install -e .[test,lint]
+    uv run make check
 
 
 License
