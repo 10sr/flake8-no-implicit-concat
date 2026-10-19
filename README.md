@@ -69,12 +69,13 @@ Other Plugins & Linters
 Development
 -----------
 
-Use tools like Pipenv:
+Use tools like Pipenv/uv:
 
+    pipenv --python 3.14
     pipenv run python -m pip install -e .[test,lint]
     pipenv run make check
     # uv example
-    uv venv
+    uv venv --python 3.14
     uv pip install -e .[test,lint]
     uv run make check
 
