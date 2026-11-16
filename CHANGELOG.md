@@ -10,11 +10,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+- Add Python 3.14 & 3.15 to classifiers list
+
+
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+- Drop Python <= 3.10 & pypy support
 
 ### Fixed
 
