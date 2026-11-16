@@ -7,7 +7,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-
 ### Added
 
 ### Changed
@@ -19,6 +18,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 ### Security
+
+
+## [0.3.8] - 2026-11-16
+
+### Added
+
+- Add Python 3.14 & 3.15 to classifiers list
+
+### Removed
+
+- Drop Python <= 3.10 & pypy support
+
+### Fixed
 
 
 ## [0.3.7] - 2024-11-05
@@ -37,7 +49,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - Fix false positive with class attribute string value and docstring
-
 
 
 ## [0.3.5] - 2023-10-22
@@ -162,7 +173,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First release
 
 
-[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.7...HEAD
+[unreleased]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.8...HEAD
+[0.3.8]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/10sr/flake8-no-implicit-concat/compare/v0.3.4...v0.3.5
